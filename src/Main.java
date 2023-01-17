@@ -2,10 +2,11 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(m1(23  ,54 ));
+        System.out.println(m1(23  ,54 )); /* ИЗМЕНИЛ String на int потому что в задании
+        не было ничего про доп. строки и я решил просто заменить String на int. */
 
-        
-        int age=19;
+
+        int age=generateRandomAge(); //<-Дз на сообразительность
         int temp=27;
         if (age>=45 && temp>=30){
             System.out.println("можно итди гулять!" );
@@ -25,6 +26,8 @@ public class Main {
         System.out.println(m1(6  ,12 ));
         System.out.println(m1(23  ,32 ));
         System.out.println(m1(23  ,10 ));
+        System.out.println(m1(12,332));
+
 
 
 
@@ -34,5 +37,8 @@ public class Main {
         return ageOfHuman+ +tempOfWeather;
 
 
+    }
+    public static int generateRandomAge(){
+        return (int) (Math.random()*24)+1;
     }
 }
